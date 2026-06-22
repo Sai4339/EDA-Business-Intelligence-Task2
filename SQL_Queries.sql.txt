@@ -1,0 +1,82 @@
+Query 1:
+
+query1 = """
+SELECT Product,
+       ROUND(SUM(Total_Sales),2) AS Revenue
+FROM sales_data
+GROUP BY Product
+ORDER BY Revenue DESC
+LIMIT 5;
+"""
+
+pd.read_sql(query1, conn)
+
+Query 2: 
+
+query2 = """
+SELECT City,
+       ROUND(SUM(Total_Sales),2) AS Revenue
+FROM sales_data
+GROUP BY City
+ORDER BY Revenue DESC;
+"""
+
+pd.read_sql(query2, conn)
+
+Query 3:
+
+query3 = """
+SELECT Category,
+       ROUND(SUM(Total_Sales),2) AS Revenue
+FROM sales_data
+GROUP BY Category
+ORDER BY Revenue DESC;
+"""
+
+pd.read_sql(query3, conn)
+
+Query 4:
+
+query4 = """
+SELECT Category,
+       ROUND(AVG(Total_Sales),2) AS Avg_Order_Value
+FROM sales_data
+GROUP BY Category
+ORDER BY Avg_Order_Value DESC;
+"""
+
+pd.read_sql(query4, conn)
+
+Query 5:
+
+query5 = """
+SELECT Gender,
+       ROUND(SUM(Total_Sales),2) AS Revenue
+FROM sales_data
+GROUP BY Gender;
+"""
+
+pd.read_sql(query5, conn)
+
+Query 6:
+
+query6 = """
+SELECT Age_Group,
+       ROUND(SUM(Total_Sales),2) AS Revenue
+FROM sales_data
+GROUP BY Age_Group
+ORDER BY Revenue DESC;
+"""
+
+pd.read_sql(query6, conn)
+
+Query 7:
+
+query7 = """
+SELECT Order_Month,
+       ROUND(SUM(Total_Sales),2) AS Revenue
+FROM sales_data
+GROUP BY Order_Month;
+"""
+
+pd.read_sql(query7, conn)

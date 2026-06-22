@@ -1,0 +1,114 @@
+# Exploratory Data Analysis & Business Intelligence
+
+## Dataset Overview
+
+* Total Records: 1000
+* Original Features: 12
+* Engineered Features: 4
+* Domain: Retail Sales
+
+## Descriptive Statistics
+
+### Age
+
+* Mean: 41.35
+* Median: 41
+* Min: 18
+* Max: 65
+
+### Quantity
+
+* Mean: 5.43
+* Median: 5
+* Min: 1
+* Max: 10
+
+### Unit Price
+
+* Mean: 25486.78
+* Median: 25398.74
+
+### Total Sales
+
+* Mean: 139399.44
+* Median: 108594.03
+
+## Univariate Analysis
+
+### Gender Distribution
+
+* Male: 511
+* Female: 489
+
+### Category Distribution
+
+* Electronics is the most common category.
+
+### Product Distribution
+
+* Mobile is the most frequently purchased product.
+
+### City Distribution
+
+* Patna has the highest number of transactions.
+
+## Revenue Analysis
+
+### Revenue by Category
+
+1. Electronics – 50.78M
+2. Education – 25.03M
+3. Grocery – 22.23M
+4. Furniture – 21.52M
+5. Fashion – 19.84M
+
+### Revenue by Product
+
+1. Laptop – 25.44M
+2. Mobile – 25.34M
+3. Book – 25.03M
+
+### Revenue by City
+
+1. Patna – 20.83M
+2. Kolkata – 18.88M
+3. Bengaluru – 18.77M
+
+## Customer Analysis
+
+### Revenue by Gender
+
+* Male: 72.46M
+* Female: 66.94M
+
+### Revenue by Age Group
+
+* Adult: 60.32M
+* Senior: 57.86M
+* Young: 21.23M
+
+## Correlation Analysis
+
+| Variables                | Correlation |
+| ------------------------ | ----------- |
+| Quantity ↔ Total Sales   | 0.647       |
+| Unit Price ↔ Total Sales | 0.686       |
+| Age ↔ Total Sales        | 0.001       |
+
+### Key Findings
+
+* Unit Price strongly impacts revenue.
+* Quantity strongly impacts revenue.
+* Age has almost no impact on sales.
+
+## Business Insights
+
+* Electronics is the highest revenue-generating category.
+* Laptop and Mobile are the best-performing products.
+* Patna contributes the highest revenue.
+* Adult customers generate the highest revenue.
+* Revenue is primarily driven by Unit Price and Quantity.
+
+## Conclusion
+
+The business is heavily dependent on Electronics sales. Product pricing and purchase quantity are the strongest drivers of revenue, while customer age has little effect on sales performance.
