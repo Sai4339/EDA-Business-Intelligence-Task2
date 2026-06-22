@@ -1,0 +1,152 @@
+Query 1:
+
+query1 = """
+SELECT Product,
+       ROUND(SUM(Total_Sales),2) AS Revenue
+FROM sales_data
+GROUP BY Product
+ORDER BY Revenue DESC
+LIMIT 5;
+"""
+
+pd.read_sql(query1, conn)
+
+Result:
+	Product	Revenue
+0	Laptop	25443008.51
+1	Mobile	25335573.19
+2	Book	25031689.40
+3	Rice	22231711.28
+4	Chair	21521561.48
+
+
+Query 2: 
+
+query2 = """
+SELECT City,
+       ROUND(SUM(Total_Sales),2) AS Revenue
+FROM sales_data
+GROUP BY City
+ORDER BY Revenue DESC;
+"""
+
+pd.read_sql(query2, conn)
+
+Result:
+
+City	Revenue
+0	Patna	20826584.43
+1	Kolkata	18884349.57
+2	Bengaluru	18773574.32
+3	Mumbai	18757050.17
+4	Hyderabad	17166766.87
+5	Delhi	16097079.00
+6	Pune	14513175.90
+7	Gaya	14380859.39
+
+
+Query 3:
+
+query3 = """
+SELECT Category,
+       ROUND(SUM(Total_Sales),2) AS Revenue
+FROM sales_data
+GROUP BY Category
+ORDER BY Revenue DESC;
+"""
+
+pd.read_sql(query3, conn)
+ Result:
+	Category	Revenue
+0	Electronics	50778581.70
+1	Education	25031689.40
+2	Grocery	22231711.28
+3	Furniture	21521561.48
+4	Fashion	19835895.79
+
+
+Query 4:
+
+query4 = """
+SELECT Category,
+       ROUND(AVG(Total_Sales),2) AS Avg_Order_Value
+FROM sales_data
+GROUP BY Category
+ORDER BY Avg_Order_Value DESC;
+"""
+
+pd.read_sql(query4, conn)
+
+Result:
+
+	Category	Avg_Order_Value
+0	Grocery	145305.30
+1	Electronics	143442.32
+2	Education	140627.47
+3	Furniture	135355.73
+4	Fashion	127153.18
+
+
+Query 5:
+
+query5 = """
+SELECT Gender,
+       ROUND(SUM(Total_Sales),2) AS Revenue
+FROM sales_data
+GROUP BY Gender;
+"""
+
+pd.read_sql(query5, conn)
+
+Result:
+
+Gender	Revenue
+0	Female	66935889.02
+1	Male	72463550.63
+
+
+Query 6:
+
+query6 = """
+SELECT Age_Group,
+       ROUND(SUM(Total_Sales),2) AS Revenue
+FROM sales_data
+GROUP BY Age_Group
+ORDER BY Revenue DESC;
+"""
+
+pd.read_sql(query6, conn)
+
+Result:
+	Age_Group	Revenue
+0	Adult	60315580.70
+1	Senior	57858374.83
+2	Young	21225484.12
+
+
+Query 7:
+
+query7 = """
+SELECT Order_Month,
+       ROUND(SUM(Total_Sales),2) AS Revenue
+FROM sales_data
+GROUP BY Order_Month;
+"""
+
+pd.read_sql(query7, conn)
+
+Result:
+
+Order_Month	Revenue
+0	April	12222700.17
+1	August	9448471.22
+2	December	12299904.44
+3	February	11511181.46
+4	January	10905580.72
+5	July	11746226.80
+6	June	12912332.64
+7	March	13059899.94
+8	May	10984689.25
+9	November	12627620.22
+10	October	12500936.50
+11	September	9179896.29
